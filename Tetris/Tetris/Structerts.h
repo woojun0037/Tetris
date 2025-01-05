@@ -1,4 +1,7 @@
-#pragma once
+#ifndef _STRUCTERTS_H_
+#define _STRUCTERTS_H_
+
+#include <Windows.h>
 
 //Å° °ª
 enum eKeyCode
@@ -34,4 +37,6 @@ struct stConsole
     {
 
     }
-}; stConsole console;
+};
+
+#endif

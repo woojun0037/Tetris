@@ -1,5 +1,5 @@
 #pragma once
-#include "Structerts.h"
+#include "ConsoleManger.h"
 
 class InputManager
 {

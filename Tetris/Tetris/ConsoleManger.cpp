@@ -49,16 +49,27 @@ void ConsoleManager::InitConsole()
 
 void ConsoleManager::DestroyConsole()
 {
-
+    //버퍼가 사용중이라면 CloseHandle로 버퍼 클리어
+    if (hBuffer[0] != nullptr) CloseHandle(hBuffer[0]);
+    if (hBuffer[1] != nullptr) CloseHandle(hBuffer[1]);
 }
 
 void ConsoleManager::CleanScreen()
 {
+    COORD pos{ 0, };
+    DWORD dwWritten = 0;
 
+    unsigned size = console.rtConsole.m_Width * console.rtConsole.m_Height;//화면 사이즈
+
+    //콘솔 화면 전체를 띄어쓰기를 넣어서 빈 화면 생성
+    FillConsoleOutputCharacter(console.hConsole, ' ', size, pos, &dwWritten);
+    SetConsoleCursorPosition(console.hConsole, pos);
+                                                                                
 }
 
 void ConsoleManager::BufferFlip()
 {
-
+    SetConsoleActiveScreenBuffer(hBuffer[curBuffer]);
+    curBuffer = curBuffer ? 0 : 1;
 }
 
