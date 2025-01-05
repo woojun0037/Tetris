@@ -1,6 +1,5 @@
 #pragma once
-#include <Windows.h>
-#include "Structerts.h"
+#include "Common.h"
 
 class ConsoleManager
 {
@@ -13,10 +12,5 @@ public:
 	void CleanScreen();
 	void BufferFlip();
 
-	HANDLE GetCurrentBuffer() const { return hBuffer[curBuffer] };
-
-private:
-	HANDLE hBuffer[2];
-	stRect consoleSize;
-	int curBuffer;
+	HANDLE GetCurrentBuffer
 };
