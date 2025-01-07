@@ -17,6 +17,12 @@ public:
 
 	HANDLE GetCurrentBuffer() const { return hBuffer[curBuffer];}
 
+	int GetCurBuffer() const { return curBuffer; }
+	void SetCurBuffer(int bufferIndex)
+	{
+		if (bufferIndex >= 0 && bufferIndex < 2) curBuffer = bufferIndex;
+	}
+
 private:
 	HANDLE hBuffer[2];
 	stRect consoleSize;

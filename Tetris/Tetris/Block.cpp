@@ -39,7 +39,39 @@ const int BLOCKS[][BLOCK_WIDTH * BLOCK_HEIGTH] =
       0,2,0,0}//z
 };
 
-const int MAP[MAP_HEIGHT][]
+const int MAP[MAP_HEGITH][MAP_WIDTH] =
+{
+    {1,1,1,1,1,1,1,1,1,1,1,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,0,0,0,0,0,0,0,0,0,0,1,},
+    {1,1,1,1,1,1,1,1,1,1,1,1,},
+};
+
+const char BLOCK_TYPES[][4] =
+{
+    "   ",
+    "в├",
+    "бр",
+};
+
 Block::Block(int id)
 {
     memcpy_s(blockData, sizeof(blockData), BLOCKS[id], sizeof(blockData));
@@ -48,7 +80,6 @@ Block::Block(int id)
 
 void Block::Rotate()
 {
-    printf("");
     int temp[BLOCK_WIDTH * BLOCK_HEIGTH] = { 0 };
 
     for (int y = 0; y < BLOCK_HEIGTH; ++y)
@@ -59,10 +90,26 @@ void Block::Rotate()
         }
     }
     memcpy_s(blockData, memSize, temp, memSize);
-    printf("");
 }
 
-void Block::Render(ConsoleManager& console)
+void Block::Render(ConsoleManager& console, int yOffset, int xOffset)
 {
     HANDLE hBuffer = console.GetCurrentBuffer();
+    COORD coord{ 0, };
+    DWORD dw = 0;
+    int xAdd = 0;
+
+    for (int y = 0; y < MAP_HEGITH; ++y)
+    {
+        xAdd = 0;
+        for (int x = 0; x < MAP_WIDTH; ++x)
+        {
+            coord.X = xAdd + xOffset;
+            coord.Y = y + yOffset;
+
+            SetConsoleCursorPosition(hBuffer[console.curBuffer])
+        }
+    }
+
+   
 }

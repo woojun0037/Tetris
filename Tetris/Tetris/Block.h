@@ -7,7 +7,8 @@ class Block
 public:
 	Block(int id);
 	void Rotate();
-	void Render(ConsoleManager& console);
+	void Render(ConsoleManager& console, int yOffset, int xOffset);
+
 
 private:
 	int blockData[BLOCK_WIDTH * BLOCK_HEIGTH];

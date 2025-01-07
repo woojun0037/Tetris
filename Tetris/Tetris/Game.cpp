@@ -17,6 +17,7 @@ void Game::RunGame()
     while (true) 
     {
         eKeyCode key = inputManager.GetInput();
+
         if (key == KEY_R) currentBlock->Rotate();
 
         consoleManager.CleanScreen();

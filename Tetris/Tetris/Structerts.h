@@ -33,10 +33,7 @@ struct stConsole
     int curBuffer;
 
     //맴버 초기화
-    stConsole() : hConsole(nullptr), hBuffer{ nullptr, }, curBuffer(0)
-    {
-
-    }
+    stConsole() : hConsole(nullptr), hBuffer{ nullptr, }, curBuffer(0){}
 };
 
 #endif
