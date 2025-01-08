@@ -21,6 +21,7 @@ public:
 	void SetCurBuffer(int bufferIndex)
 	{
 		if (bufferIndex >= 0 && bufferIndex < 2) curBuffer = bufferIndex;
+		else std::out_of_range("버퍼 인덱스 초과~");
 	}
 
 private:

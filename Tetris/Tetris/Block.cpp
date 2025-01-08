@@ -1,7 +1,7 @@
 #include "Block.h"
 #include <stdio.h>
 
-const int BLOCKS[][BLOCK_WIDTH * BLOCK_HEIGTH] =
+const int Block::BLOCKS[][BLOCK_WIDTH * BLOCK_HEIGTH] =
 {
     { 0,0,0,0,
       2,2,2,2,
@@ -39,7 +39,7 @@ const int BLOCKS[][BLOCK_WIDTH * BLOCK_HEIGTH] =
       0,2,0,0}//z
 };
 
-const int MAP[MAP_HEGITH][MAP_WIDTH] =
+const int Block::MAP[MAP_HEGITH][MAP_WIDTH] =
 {
     {1,1,1,1,1,1,1,1,1,1,1,1,},
     {1,0,0,0,0,0,0,0,0,0,0,1,},
@@ -65,17 +65,17 @@ const int MAP[MAP_HEGITH][MAP_WIDTH] =
     {1,1,1,1,1,1,1,1,1,1,1,1,},
 };
 
-const char BLOCK_TYPES[][4] =
+const char Block::BLOCK_TYPES[][4] =
 {
     "   ",
     "в├",
     "бр",
 };
 
-Block::Block(int id)
+Block::Block(int id) : id(id)
 {
     memcpy_s(blockData, sizeof(blockData), BLOCKS[id], sizeof(blockData));
-    memSize = sizeof(blockData);
+    memSize = BLOCK_WIDTH * BLOCK_HEIGTH * sizeof(int);
 }
 
 void Block::Rotate()
@@ -94,20 +94,28 @@ void Block::Rotate()
 
 void Block::Render(ConsoleManager& console, int yOffset, int xOffset)
 {
-    HANDLE hBuffer = console.GetCurrentBuffer();
     COORD coord{ 0, };
     DWORD dw = 0;
     int xAdd = 0;
+
+    HANDLE hBuffer = console.GetCurrentBuffer();
 
     for (int y = 0; y < MAP_HEGITH; ++y)
     {
         xAdd = 0;
         for (int x = 0; x < MAP_WIDTH; ++x)
         {
-            coord.X = xAdd + xOffset;
-            coord.Y = y + yOffset;
+            if (blockData[y * BLOCK_WIDTH + x] != 0)
+            {
+                coord.X = xAdd + xOffset;
+                coord.Y = y + yOffset;
 
-            SetConsoleCursorPosition(hBuffer[console.curBuffer])
+                SetConsoleCursorPosition(hBuffer, coord);
+                WriteFile(hBuffer, BLOCK_TYPES[MAP[y][x]], sizeof(BLOCK_TYPES[MAP[y][x]]), & dw, NULL);
+            }
+            xAdd += 1;
+            if (BLOCK_TYPES[MAP[y][x]] == 0)
+                xAdd += 1;
         }
     }
 
