@@ -39,7 +39,7 @@ const int Block::BLOCKS[][BLOCK_WIDTH * BLOCK_HEIGTH] =
       0,2,0,0}//z
 };
 
-const int Block::MAP[MAP_HEGITH][MAP_WIDTH] =
+const int Block::MAP[MAP_HEIGHT][MAP_WIDTH] =
 {
     {1,1,1,1,1,1,1,1,1,1,1,1,},
     {1,0,0,0,0,0,0,0,0,0,0,1,},
@@ -100,24 +100,22 @@ void Block::Render(ConsoleManager& console, int yOffset, int xOffset)
 
     HANDLE hBuffer = console.GetCurrentBuffer();
 
-    for (int y = 0; y < MAP_HEGITH; ++y)
+    for (int y = 0; y < MAP_HEIGHT; ++y)
     {
         xAdd = 0;
         for (int x = 0; x < MAP_WIDTH; ++x)
         {
-            if (blockData[y * BLOCK_WIDTH + x] != 0)
+            if (blockData[y * BLOCK_WIDTH + x] != 0)  // 블록 데이터가 0이 아니면
             {
-                coord.X = xAdd + xOffset;
-                coord.Y = y + yOffset;
+                coord.X = xAdd + xOffset;  // x좌표는 xAdd와 xOffset의 합
+                coord.Y = y + yOffset;     // y좌표는 y + yOffset
 
-                SetConsoleCursorPosition(hBuffer, coord);
-                WriteFile(hBuffer, BLOCK_TYPES[MAP[y][x]], sizeof(BLOCK_TYPES[MAP[y][x]]), & dw, NULL);
+                SetConsoleCursorPosition(hBuffer, coord);  // 콘솔 커서 위치 설정
+                WriteFile(hBuffer, BLOCK_TYPES[blockData[y * BLOCK_WIDTH + x]], sizeof(BLOCK_TYPES[0]), &dw, NULL);  // 블록 출력
             }
             xAdd += 1;
-            if (BLOCK_TYPES[MAP[y][x]] == 0)
+            if (blockData[y * BLOCK_WIDTH + x] == 0)  // 만약 블록 데이터가 0이면 xAdd 증가
                 xAdd += 1;
         }
     }
-
-   
 }

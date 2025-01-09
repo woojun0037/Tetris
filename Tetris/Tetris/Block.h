@@ -24,7 +24,8 @@ public:
 
 	const int* GetBlock    () const { return BLOCKS[id];}
 	const int* GetBlockData() const { return blockData; }
-	//const int* GetMapData() const { return mapData[MAP_HEIGHT][MAP_WIDTH]; }
+
+	const int(*GetMapData())[MAP_WIDTH]{ return mapData;}
 
 private:
 	int id;

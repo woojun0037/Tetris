@@ -8,7 +8,11 @@ public:
 	Player(Block& block);
 	~Player();
 
+	void UpdateBlockPosition();
+	void Render(ConsoleManager& console);
+
 private:
-	COORD playerCursor; //플레이어 위치
-	const Block& block; //참조로 저장
+	Block& block;
+	COORD playerCursor;
+	int blockPosition[MAP_HEIGHT][MAP_WIDTH] = { 0 };
 };

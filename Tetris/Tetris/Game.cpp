@@ -21,7 +21,7 @@ void Game::RunGame()
         if (key == KEY_R) currentBlock->Rotate();
 
         consoleManager.CleanScreen();
-        currentBlock->Render(consoleManager);
+        //currentBlock->Render(consoleManager,);
 
         Sleep(100);
     }
