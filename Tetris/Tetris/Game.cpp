@@ -14,6 +14,8 @@ void Game::Init()
 
 void Game::RunGame()
 {
+    Player player(*currentBlock);
+
     while (true) 
     {
         eKeyCode key = inputManager.GetInput();
@@ -21,9 +23,10 @@ void Game::RunGame()
         if (key == KEY_R) currentBlock->Rotate();
 
         consoleManager.CleanScreen();
-        //currentBlock->Render(consoleManager,);
 
-        Sleep(100);
+        player.Render(consoleManager);
+
+        Sleep(1);
     }
 }
 

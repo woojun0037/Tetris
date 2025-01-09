@@ -1,39 +1,35 @@
 ﻿  Block.cpp
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(19,7): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(19,7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(19,29): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(8,9): error C2061: 구문 오류: 식별자 'Block'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(12,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(15,7): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(15,7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(15,14): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(17,20): error C2065: 'MAP_HEIGHT': 선언되지 않은 식별자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(17,32): error C2065: 'MAP_WIDTH': 선언되지 않은 식별자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(20,7): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(20,7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(20,29): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
   ConsoleManger.cpp
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(10,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,16): error C2065: 'BLOCK_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,30): error C2065: 'BLOCK_HEIGTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,14): error C2065: 'MAP_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,26): error C2065: 'MAP_HEGITH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(19,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(12,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
   Game.cpp
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(10,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,16): error C2065: 'BLOCK_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,30): error C2065: 'BLOCK_HEIGTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,14): error C2065: 'MAP_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,26): error C2065: 'MAP_HEGITH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.cpp(24,21): error C2660: 'Block::Render': 함수는 1개의 인수를 사용하지 않습니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(10,7): message : 'Block::Render' 선언을 참조하십시오.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.cpp(24,21): message : 인수 목록 '(ConsoleManager)'을(를) 일치시키는 동안
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(19,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
   InputManager.cpp
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(10,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,16): error C2065: 'BLOCK_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,30): error C2065: 'BLOCK_HEIGTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,14): error C2065: 'MAP_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,26): error C2065: 'MAP_HEGITH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(17,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,17): error C3646: 'inputManager': 알 수 없는 재정의 지정자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,29): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-  main.cpp
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,16): error C2065: 'BLOCK_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(13,30): error C2065: 'BLOCK_HEIGTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,14): error C2065: 'MAP_WIDTH': 선언되지 않은 식별자입니다.
-C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(14,26): error C2065: 'MAP_HEGITH': 선언되지 않은 식별자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(19,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.h(12,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(19,17): error C3646: 'inputManager': 알 수 없는 재정의 지정자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(19,29): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  Player.cpp
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(19,14): error C2061: 구문 오류: 식별자 'ConsoleManager'
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,17): error C3646: 'consoleManager': 알 수 없는 재정의 지정자입니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Game.h(18,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.cpp(50,9): error C2660: 'Block::Render': 함수는 3개의 인수를 사용하지 않습니다.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Block.h(19,7): message : 'Block::Render' 선언을 참조하십시오.
+C:\Users\SGA\Desktop\Tetris\Tetris\Tetris\Player.cpp(50,9): message : 인수 목록 '(ConsoleManager, int, int)'을(를) 일치시키는 동안
   코드를 생성하고 있습니다...
