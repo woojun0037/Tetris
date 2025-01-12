@@ -2,7 +2,6 @@
 #include "ConsoleManger.h"
 #include "InputManager.h"
 #include "Block.h"
-#include "Player.h"
 
 class Game
 {
